@@ -1,0 +1,23 @@
+{
+  "index": {
+    "title":"Üdvözlet",
+    "type":"page",
+    "display": "hidden"
+  },
+  "bemutatkozas": {
+    "title": "Bemutatozás",
+    "type": "page"
+  },
+  "lehetosegek": {
+    "title": "Lehetőségek",
+    "type": "page"
+  },
+  "tamogatok": {
+    "type": "page",
+    "title": "Támogatók"
+  },
+  "kapcsolat": {
+    "type": "page",
+    "title": "Kapcsolat"
+  }
+}

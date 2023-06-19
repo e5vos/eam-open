@@ -1,0 +1,14 @@
+{
+    "info": {
+        "title": "Általános információk"
+    },
+    "szakkorok": {
+        "title": "Szakkörök"
+    },
+    "palyazatok": {
+        "title": "Pályázatok"
+    },
+    "egyeb": {
+        "title": "Egyéb"
+    }
+}

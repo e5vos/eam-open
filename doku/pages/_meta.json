@@ -1,0 +1,16 @@
+{
+  "index": "Bevezetés",
+  "rolunk": {
+    "title": "A műhelyről",
+    "type": "page"
+  },
+  "contact": {
+    "title": "Kapcsolat ↗",
+    "type": "page",
+    "href": "mailto:barnagoz@icloud.com",
+    "newWindow": true
+  },
+  "kontribucio": {
+    "title": "Kontribúció"
+  }
+}
