@@ -75,12 +75,14 @@ const config: DocsThemeConfig = {
           fontSize: "0.8rem",
           justifyContent: "space-between",
           color: "#666",
+          flexWrap: "wrap",
         }}
       >
         <div
           style={{
             display: "flex",
             justifyContent: "flex-start",
+            flexWrap: "wrap",
             gap: "0.8rem",
           }}
         >

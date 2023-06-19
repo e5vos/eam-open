@@ -3,9 +3,6 @@ import { DocsThemeConfig } from "nextra-theme-docs";
 import Image from "next/image";
 
 const config: DocsThemeConfig = {
-  project: {
-    link: "https://github.com/barnagoz/eam-front",
-  },
   head: (
     <>
       <link
@@ -40,7 +37,8 @@ const config: DocsThemeConfig = {
     </>
   ),
   logoLink: "/",
-  docsRepositoryBase: "https://github.com/barnagoz/eam-front/tree/main/doku/pages",
+  docsRepositoryBase:
+    "https://github.com/barnagoz/eam-front/tree/main/doku/pages",
   useNextSeoProps() {
     return {
       titleTemplate: "%s – EAM",
@@ -80,6 +78,7 @@ const config: DocsThemeConfig = {
           gap: "1rem",
           fontSize: "0.8rem",
           color: "#666",
+          flexWrap: "wrap",
         }}
       >
         <p>
