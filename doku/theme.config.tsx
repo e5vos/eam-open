@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const config: DocsThemeConfig = {
   project: {
-    link: "https://github.com/barnagoz/eam",
+    link: "https://github.com/barnagoz/eam-front",
   },
   head: (
     <>
@@ -40,7 +40,7 @@ const config: DocsThemeConfig = {
     </>
   ),
   logoLink: "/",
-  docsRepositoryBase: "https://github.com/barnagoz/eam/tree/main/doku/pages",
+  docsRepositoryBase: "https://github.com/barnagoz/eam-front/tree/main/doku/pages",
   useNextSeoProps() {
     return {
       titleTemplate: "%s – EAM",

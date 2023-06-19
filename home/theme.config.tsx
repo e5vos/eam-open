@@ -37,7 +37,8 @@ const config: DocsThemeConfig = {
     </>
   ),
   logoLink: "/",
-  docsRepositoryBase: "https://github.com/barnagoz/eam/tree/main/home/pages",
+  docsRepositoryBase:
+    "https://github.com/barnagoz/eam-front/tree/main/home/pages",
   useNextSeoProps() {
     return {
       titleTemplate: "%s – EAM",
