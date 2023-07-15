@@ -1,5 +1,5 @@
 {
-  "index": "Bevezetés",
+  "index": "Előszó",
   "rolunk": {
     "title": "A műhelyről",
     "type": "page"
@@ -9,6 +9,15 @@
     "type": "page",
     "href": "mailto:barnagoz@icloud.com",
     "newWindow": true
+  },
+  "kezdet": {
+    "title": "Műhelybe lépés előtt"
+  },
+  "szabalyzatok": {
+    "title": "Szabályzatok"
+  },
+  "online": {
+    "title": "Online felületek"
   },
   "kontribucio": {
     "title": "Kontribúció"

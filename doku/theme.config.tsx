@@ -72,6 +72,7 @@ const config: DocsThemeConfig = {
   footer: {
     component: (
       <div
+        className="noprint"
         style={{
           padding: "1rem",
           display: "flex",
