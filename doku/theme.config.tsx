@@ -31,9 +31,11 @@ const config: DocsThemeConfig = {
   ),
   logo: (
     <>
-      <Image width={50} height={50} alt="EAM Logo" src={"/logo.png"} />
+      <Image width={50} height={50} alt="EAM Logo" src={"/logo-orange.png"} />
       <br />
-      <strong style={{ marginLeft: "10px" }}>MűhelyDokumentáció™</strong>
+      <strong style={{ marginLeft: "10px", color: "rgb(248,120,45)" }}>
+        MűhelyDokumentáció™
+      </strong>
     </>
   ),
   logoLink: "/",
@@ -45,7 +47,7 @@ const config: DocsThemeConfig = {
     };
   },
   darkMode: true,
-  primaryHue: 40,
+  primaryHue: 30,
   search: {
     emptyResult: (
       <p className="nx-block nx-select-none nx-p-8 nx-text-center nx-text-sm nx-text-gray-400">
@@ -54,10 +56,6 @@ const config: DocsThemeConfig = {
     ),
     loading: "Betöltés...",
     placeholder: "Keresés az oldalon...",
-  },
-  banner: {
-    dismissible: true,
-    text: <p>Az oldal jelenleg még fejlesztés alatt áll.</p>,
   },
   editLink: {
     text: "Oldal szerkesztése",
@@ -72,34 +70,55 @@ const config: DocsThemeConfig = {
   footer: {
     component: (
       <div
-        className="noprint"
         style={{
           padding: "1rem",
           display: "flex",
           gap: "1rem",
           fontSize: "0.8rem",
+          justifyContent: "space-between",
           color: "#666",
           flexWrap: "wrap",
         }}
       >
-        <p>
-          {new Date().getFullYear()} ©{" "}
-          <a href="https://e5vosalkoto.eu" target="_blank">
-            Eötvös Alkotó Műhely
-          </a>
-          .
-        </p>
-        <p>‎</p>
-        <p>
-          <a href="https://konzol.e5vosalkoto.eu" target="_blank">
-            MűhelyKonzol™
-          </a>
-        </p>
-        <p>
-          <a href="https://doku.e5vosalkoto.eu" target="_blank">
-            MűhelyDokumentáció™
-          </a>
-        </p>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "flex-start",
+            flexWrap: "wrap",
+            gap: "0.8rem",
+          }}
+        >
+          <p>
+            {new Date().getFullYear()} ©{" "}
+            <a href="https://e5vosalkoto.eu" target="_blank">
+              Eötvös Alkotó Műhely
+            </a>
+            .
+          </p>
+          <p>‎</p>
+          <p>
+            <a href="https://konzol.e5vosalkoto.eu" target="_blank">
+              MűhelyKonzol™
+            </a>
+          </p>
+          <p>
+            <a href="https://doku.e5vosalkoto.eu" target="_blank">
+              MűhelyDokumentáció™
+            </a>
+          </p>
+          <p>
+            <a href="https://jelentkezes.e5vosalkoto.eu" target="_blank">
+              MűhelyJelentkeztető™
+            </a>
+          </p>
+        </div>
+        <div style={{ display: "flex", justifyContent: "flex-end" }}>
+          <p>
+            <a href="https://e5vosalkoto.eu/tamogatok" target="_blank">
+              Támogatók
+            </a>
+          </p>
+        </div>
       </div>
     ),
   },
