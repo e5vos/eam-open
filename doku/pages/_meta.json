@@ -4,12 +4,6 @@
     "title": "A műhelyről",
     "type": "page"
   },
-  "contact": {
-    "title": "Kapcsolat ↗",
-    "type": "page",
-    "href": "mailto:barnagoz@icloud.com",
-    "newWindow": true
-  },
   "kezdet": {
     "title": "Műhelybe lépés előtt"
   },
