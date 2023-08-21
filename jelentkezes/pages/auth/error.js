@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Heading, Flex, Text, Button } from "@chakra-ui/react";
+import { Heading, Flex, Text, Button, Image } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import Navigation from "@/components/navigation";
 
 export default function Error() {
   const [errorText, setErrorText] = useState("Betöltés...");
@@ -32,12 +33,42 @@ export default function Error() {
   }, [error]);
 
   return (
-    <Flex w="full" h="full" align="center" justify="center">
-      <Heading>Hiba történt</Heading>
-      <Text>{errorText}</Text>
-      <Link href={"/auth/signin"}>
-        <Button>Újrapróbálom</Button>
-      </Link>
+    <Flex direction={"column"} overflowY={"hidden"} maxH={"100vh"}>
+      <Navigation loginHidden={true} />
+      <Flex
+        w="full"
+        h="90vh"
+        align="center"
+        justify="center"
+        bgImage={"url(/bg.jpg)"}
+        bgSize={"cover"}
+      >
+        <Flex
+          direction={"column"}
+          align={"center"}
+          justify={"center"}
+          bgColor={"whiteAlpha.800"}
+          px={8}
+          py={8}
+          gap={2}
+          rounded={"xl"}
+          maxW={"md"}
+          shadow={"md"}
+        >
+          <Image
+            src="/logo-orange.png"
+            alt="logo"
+            w="100px"
+            h="100px"
+            my={"-2"}
+          />
+          <Heading mb={2}>Hiba történt</Heading>
+          <Text>{errorText}</Text>
+          <Link href={"/auth/signin"}>
+            <Button>Újrapróbálom</Button>
+          </Link>
+        </Flex>
+      </Flex>
     </Flex>
   );
 }

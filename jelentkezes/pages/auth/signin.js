@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { signIn, useSession } from "next-auth/react";
-import { Button, Flex } from "@chakra-ui/react";
+import { Button, Flex, Heading, Text, Image } from "@chakra-ui/react";
 import { useRouter } from "next/router";
+import Navigation from "@/components/navigation";
 
 export default function SignIn() {
   const { data: session } = useSession();
@@ -18,8 +19,46 @@ export default function SignIn() {
   }, [session, callbackUrl, router]);
 
   return (
-    <Flex w="full" h="full" align="center" justify="center">
-      <Button onClick={() => signIn("google")}>Bejelentkezés</Button>
+    <Flex direction={"column"} overflowY={"hidden"} maxH={"100vh"}>
+      <Navigation loginHidden={true} />
+      <Flex
+        w="full"
+        h="90vh"
+        align="center"
+        justify="center"
+        bgImage={"url(/bg.jpg)"}
+        bgSize={"cover"}
+      >
+        <Flex
+          direction={"column"}
+          align={"center"}
+          justify={"center"}
+          bgColor={"whiteAlpha.800"}
+          px={8}
+          py={8}
+          gap={2}
+          rounded={"xl"}
+          maxW={"md"}
+          shadow={"md"}
+        >
+          <Image
+            src="/logo-orange.png"
+            alt="logo"
+            w="100px"
+            h="100px"
+            my={"-2"}
+          />
+          <Heading mb={2}>Bejelentkezés</Heading>
+          <Text>
+            A programokra történő jelentkezéshez be kell jelentkezni, hogy a a
+            foglalkozásvezetőnek jelentkezés esetén el tudjuk küldeni nevedet és
+            email címedet.
+          </Text>
+          <Button colorScheme="blue" onClick={() => signIn("google")}>
+            Folytatás Google fiókkal
+          </Button>
+        </Flex>
+      </Flex>
     </Flex>
   );
 }

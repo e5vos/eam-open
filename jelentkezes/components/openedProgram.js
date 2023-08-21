@@ -18,7 +18,7 @@ import {
 } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 
-export default function OpenedProgram({ program, joinProgram }) {
+export default function OpenedProgram({ program, joinProgram, closeProgram }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   useEffect(() => {
@@ -30,19 +30,19 @@ export default function OpenedProgram({ program, joinProgram }) {
   }, [program]);
 
   return (
-    <Modal isOpen={isOpen} size={"xl"} onClose={onClose}>
+    <Modal isOpen={isOpen} size={"xl"} onClose={closeProgram}>
       <ModalOverlay />
-      <ModalContent>
+      <ModalContent rounded={"xl"}>
         <ModalHeader as={Flex} gap={3} alignItems={"center"}>
           <Avatar name={program?.title} src={program?.logoURL} size={"sm"} />
           {program?.title}
-          <ModalCloseButton />
+          <ModalCloseButton rounded={"xl"} />
         </ModalHeader>
         <ModalBody>
           <Image
             src={program?.bannerURL}
             alt="A program képe"
-            borderRadius="lg"
+            rounded={"xl"}
             maxH={"200px"}
             objectFit={"cover"}
             width={"full"}
@@ -93,6 +93,7 @@ export default function OpenedProgram({ program, joinProgram }) {
             <Button
               colorScheme={"orange"}
               onClick={() => joinProgram(program?._id)}
+              rounded={"xl"}
               px={12}
             >
               Jelentkezem a programra

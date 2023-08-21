@@ -12,6 +12,7 @@ import axios from "axios";
 import ProgramGrid from "@/components/programGrid";
 import OpenedProgram from "@/components/openedProgram";
 import AreYouSure from "@/components/areYouSure";
+import Navigation from "@/components/navigation";
 
 export default function Home() {
   const { data: session } = useSession();
@@ -31,23 +32,18 @@ export default function Home() {
 
   return (
     <>
-      <Button onClick={signIn}>Bejelentkezés</Button>
-      {session?.user && (
-        <>
-          <Heading>Üdvözöllek {session.user.name}!</Heading>
-          <Text>Bejelentkezve mint {session.user.email}</Text>
-          <Link href="/auth/signout?callbackUrl=/">
-            <Button>Kijelentkezés</Button>
-          </Link>
-        </>
-      )}
+      <Navigation />
       <AreYouSure
         isOpen={isOpen}
         onClose={onClose}
         joinProgram={joinProgram}
         joiningProgram={joiningProgram}
       />
-      <OpenedProgram program={openedProgram} joinProgram={openAlertDialog} />
+      <OpenedProgram
+        program={openedProgram}
+        joinProgram={openAlertDialog}
+        closeProgram={closeProgram}
+      />
       <ProgramGrid
         programs={activePrograms}
         joinProgram={openAlertDialog}
@@ -136,5 +132,9 @@ export default function Home() {
 
   function openProgram(program) {
     setOpenedProgram(program);
+  }
+
+  function closeProgram() {
+    setOpenedProgram(null);
   }
 }
