@@ -31,21 +31,23 @@ const config: DocsThemeConfig = {
   ),
   logo: (
     <>
-      <Image width={50} height={50} alt="EAM Logo" src={"/logo.png"} />
+      <Image width={50} height={50} alt="EAM Logo" src={"/logo-orange.png"} />
       <br />
-      <strong style={{ marginLeft: "10px" }}>Eötvös Alkotó Műhely</strong>
+      <strong style={{ marginLeft: "10px", color: "rgb(248,120,45)" }}>
+        Eötvös Alkotó Műhely
+      </strong>
     </>
   ),
   logoLink: "/",
   docsRepositoryBase:
-    "https://github.com/barnagoz/eam-front/tree/main/home/pages",
+    "https://github.com/barnagoz/eam-open/tree/main/home/pages",
   useNextSeoProps() {
     return {
       titleTemplate: "%s – EAM",
     };
   },
   darkMode: true,
-  primaryHue: 40,
+  primaryHue: 30,
   search: {
     emptyResult: (
       <p className="nx-block nx-select-none nx-p-8 nx-text-center nx-text-sm nx-text-gray-400">
@@ -55,9 +57,7 @@ const config: DocsThemeConfig = {
     loading: "Betöltés...",
     placeholder: "Keresés az oldalon...",
   },
-  editLink: {
-    text: "Oldal szerkesztése",
-  },
+  editLink: false,
   navigation: false,
   toc: {
     title: "Tartalomjegyzék",
@@ -104,6 +104,11 @@ const config: DocsThemeConfig = {
               MűhelyDokumentáció™
             </a>
           </p>
+          <p>
+            <a href="https://jelentkezes.e5vosalkoto.eu" target="_blank">
+              MűhelyJelentkeztető™
+            </a>
+          </p>
         </div>
         <div style={{ display: "flex", justifyContent: "flex-end" }}>
           <p>
@@ -124,13 +129,7 @@ const config: DocsThemeConfig = {
       };
     },
   },
-  gitTimestamp: function GitTimestamp({ timestamp }) {
-    return (
-      <p style={{ fontSize: "0.8rem", color: "#666" }}>
-        Utoljára frissítve: {timestamp.toLocaleString("hu-HU")}
-      </p>
-    );
-  },
+  gitTimestamp: false,
 };
 
 export default config;
