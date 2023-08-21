@@ -1,9 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { Button, Heading, Text, useToast } from "@chakra-ui/react";
-import { signIn, signOut, useSession } from "next-auth/react";
+import {
+  Button,
+  Heading,
+  Text,
+  useToast,
+  useDisclosure,
+} from "@chakra-ui/react";
+import { signIn, useSession } from "next-auth/react";
 import Link from "next/link";
 import axios from "axios";
 import ProgramGrid from "@/components/programGrid";
+import OpenedProgram from "@/components/openedProgram";
+import AreYouSure from "@/components/areYouSure";
 
 export default function Home() {
   const { data: session } = useSession();
@@ -13,6 +21,9 @@ export default function Home() {
     isClosable: true,
   });
   const [activePrograms, setActivePrograms] = useState([]);
+  const [openedProgram, setOpenedProgram] = useState(null);
+  const [joiningProgram, setJoiningProgram] = useState(null);
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   useEffect(() => {
     getActivePrograms();
@@ -30,7 +41,18 @@ export default function Home() {
           </Link>
         </>
       )}
-      <ProgramGrid programs={activePrograms} joinProgram={joinProgram} />
+      <AreYouSure
+        isOpen={isOpen}
+        onClose={onClose}
+        joinProgram={joinProgram}
+        joiningProgram={joiningProgram}
+      />
+      <OpenedProgram program={openedProgram} joinProgram={openAlertDialog} />
+      <ProgramGrid
+        programs={activePrograms}
+        joinProgram={openAlertDialog}
+        openProgram={openProgram}
+      />
     </>
   );
 
@@ -40,6 +62,23 @@ export default function Home() {
     );
 
     setActivePrograms(resp.data.data);
+  }
+
+  function openAlertDialog(programId) {
+    if (!session || !session.user) {
+      toast({
+        title: "Előbb jelentkezz be!",
+        description:
+          "Programra jelentkezés előtt be kell jelentkezned, hogy azonosítani tudjunk.",
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+      });
+      return;
+    }
+
+    setJoiningProgram(programId);
+    onOpen();
   }
 
   async function joinProgram(programId) {
@@ -93,5 +132,9 @@ export default function Home() {
         });
         break;
     }
+  }
+
+  function openProgram(program) {
+    setOpenedProgram(program);
   }
 }

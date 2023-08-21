@@ -26,7 +26,7 @@ import {
 import { IoIosCheckmarkCircle, IoIosLock } from "react-icons/io";
 import React from "react";
 
-export default function ProgramGrid({ programs, joinProgram }) {
+export default function ProgramGrid({ programs, joinProgram, openProgram }) {
   return (
     <Grid templateColumns={"repeat(3, 1fr)"} gap={4} p={4}>
       {programs.length > 0 &&
@@ -95,7 +95,11 @@ export default function ProgramGrid({ programs, joinProgram }) {
               <Divider color={"gray.200"} />
               <CardFooter>
                 <ButtonGroup spacing="2" ml={"auto"}>
-                  <Button variant="ghost" colorScheme="orange">
+                  <Button
+                    onClick={() => openProgram(program)}
+                    variant="ghost"
+                    colorScheme="orange"
+                  >
                     Részletek
                   </Button>
                   {program.registerEnabled && (
