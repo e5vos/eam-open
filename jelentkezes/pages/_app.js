@@ -1,5 +1,6 @@
 import { SessionProvider } from "next-auth/react";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import Footer from "@/components/footer";
 
 export default function App({
   Component,
@@ -9,6 +10,7 @@ export default function App({
     <SessionProvider session={session}>
       <ChakraProvider>
         <Component {...pageProps} />
+        <Footer />
       </ChakraProvider>
     </SessionProvider>
   );
