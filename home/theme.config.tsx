@@ -57,7 +57,9 @@ const config: DocsThemeConfig = {
     loading: "Betöltés...",
     placeholder: "Keresés az oldalon...",
   },
-  editLink: false,
+  editLink: {
+    component: null,
+  },
   navigation: false,
   toc: {
     title: "Tartalomjegyzék",
