@@ -10,6 +10,8 @@ Ez a repository szigorúan a **külső** rendszereket tárolja melyeket a public
 ### A repository több projeketet tartalmaz:
 - **doku**: A műhely dokumentációs platformja, ahol az összes tárgyról, projektről részeletes beszámoló készül, hogy a többi diák vagy tanár kedve szerint használhassa óráin.
 - **home**: Az Alkotó Műhely nyilvános weboldala, ahol megtekinthetőek az általános információk a műhellyel kapcsolatban, valamint az EAM támogatói is szerepelnek.
+- **jelentkezes**: Az EAM legújabb rendszere, mely lehetővé teszi a tanároknak szakkörök meghírdetését, melyekre a diákok később jelentkezhetnek.
+
 ## Felhasználók
 
 A projeketet jelenelg kizárólag az Eötvös Alkotó Műhely mögött álló Budapest V. Kerületi Eötvös József Gimnázium használja, de megkeresésekre az alábbi elérhetőségeken nyitottak vagyunk.
@@ -17,7 +19,8 @@ A projeketet jelenelg kizárólag az Eötvös Alkotó Műhely mögött álló Bu
 
 ## Hostolás
 
-- **doku** és **home**: [Vercel](https://vercel.com)
+- **doku**, **home** és **jelentkezes**: [Vercel](https://vercel.com)
+
 ## Kontribútorok
 
 - [@barnagoz](https://www.github.com/barnagoz)

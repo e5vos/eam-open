@@ -1,5 +1,5 @@
 {
-  "name": "eam-home",
+  "name": "@eam/web",
   "version": "1.0.0",
   "description": "Eötvös Alkotó Műhely",
   "scripts": {
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/barnagoz/eam-open.git"
   },
-  "author": "Shu Ding <g@shud.in>",
+  "author": "Barnabás Gőz <goz.barnabas@e5vosalkoto.eu>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/barnagoz/eam-open/issues"

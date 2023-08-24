@@ -1,7 +1,9 @@
 {
-  "name": "jelentkezes",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@eam/jelentkezes",
+  "version": "1.0.0",
+  "private": false,
+  "author": "Barnabás Gőz <goz.barnabas@e5vosalkoto.eu>",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

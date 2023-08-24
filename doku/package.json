@@ -1,5 +1,5 @@
 {
-  "name": "eam-doku",
+  "name": "@eam/doku",
   "version": "1.0.0",
   "description": "MűhelyDokumentáció™",
   "scripts": {
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/barnagoz/eam-open.git"
   },
-  "author": "Barnabás Gőz",
+  "author": "Barnabás Gőz <goz.barnabas@e5vosalkoto.eu>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/barnagoz/eam-open/issues"
