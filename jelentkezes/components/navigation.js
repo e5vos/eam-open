@@ -8,7 +8,11 @@ export default function Navigation({ loginHidden }) {
   return (
     <Flex w={"full"} px={2} align={"center"} gap={2} bg={"white"}>
       <Image src="/logo-orange.png" alt="logo" w="100px" h="100px" />
-      <Heading size={"md"} color={"rgb(248,120,57)"}>
+      <Heading
+        size={"md"}
+        color={"rgb(248,120,57)"}
+        display={{ base: "hidden", md: "block" }}
+      >
         MűhelyJelentkezés™
       </Heading>
       <Spacer />
