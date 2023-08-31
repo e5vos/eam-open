@@ -2,8 +2,13 @@
     "info": {
         "title": "Általános információk"
     },
+    "jelentkezes": {
+        "title": "Jelentkezés szakkörökre →",
+        "href": "https://jelentkezes.e5vosalkoto.eu"
+    },
     "szakkorok": {
-        "title": "Szakkörök"
+        "title": "Szakkörök",
+        "display": "hidden"
     },
     "palyazatok": {
         "title": "Pályázatok"

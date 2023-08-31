@@ -1,23 +1,37 @@
 {
   "index": {
-    "title":"Üdvözlet",
-    "type":"page",
-    "display": "hidden"
+    "title": "Kezdőlap",
+    "type": "page",
+    "theme": {
+      "typesetting": "article"
+    }
   },
   "bemutatkozas": {
     "title": "Bemutatozás",
-    "type": "page"
+    "type": "page",
+    "theme": {
+      "typesetting": "article"
+    }
   },
   "lehetosegek": {
     "title": "Lehetőségek",
-    "type": "page"
+    "type": "page",
+    "theme": {
+      "typesetting": "article"
+    }
   },
   "tamogatok": {
     "type": "page",
-    "title": "Támogatók"
+    "title": "Támogatók",
+    "theme": {
+      "typesetting": "article"
+    }
   },
   "kapcsolat": {
     "type": "page",
-    "title": "Kapcsolat"
+    "title": "Kapcsolat",
+    "theme": {
+      "typesetting": "article"
+    }
   }
 }
