@@ -65,7 +65,9 @@ export default function Error() {
           <Heading mb={2}>Hiba történt</Heading>
           <Text>{errorText}</Text>
           <Link href={"/auth/signin"}>
-            <Button>Újrapróbálom</Button>
+            <Button rounded={"full"} px={8}>
+              Újrapróbálom
+            </Button>
           </Link>
         </Flex>
       </Flex>

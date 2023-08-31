@@ -54,7 +54,12 @@ export default function SignIn() {
             foglalkozásvezetőnek jelentkezés esetén el tudjuk küldeni nevedet és
             email címedet.
           </Text>
-          <Button colorScheme="blue" onClick={() => signIn("google")}>
+          <Button
+            colorScheme="blue"
+            onClick={() => signIn("google")}
+            px={8}
+            rounded={"full"}
+          >
             Folytatás Google fiókkal
           </Button>
         </Flex>

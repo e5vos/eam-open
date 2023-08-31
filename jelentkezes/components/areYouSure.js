@@ -19,7 +19,7 @@ export default function AreYouSure({
   return (
     <AlertDialog isOpen={isOpen} onClose={onClose}>
       <AlertDialogOverlay>
-        <AlertDialogContent rounded={"xl"}>
+        <AlertDialogContent rounded={"2xl"}>
           <AlertDialogHeader fontSize="lg" fontWeight="bold">
             Jelentkezés egy programra
           </AlertDialogHeader>
@@ -30,12 +30,13 @@ export default function AreYouSure({
           </AlertDialogBody>
 
           <AlertDialogFooter>
-            <Button onClick={onClose} rounded={"xl"}>
+            <Button onClick={onClose} rounded={"full"} variant={"outline"}>
               Mégsem
             </Button>
             <Button
               colorScheme="orange"
-              rounded={"xl"}
+              rounded={"full"}
+              px={8}
               onClick={() => {
                 joinProgram(joiningProgram);
                 onClose();
