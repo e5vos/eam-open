@@ -11,7 +11,7 @@ export default function Navigation({ loginHidden }) {
       <Heading
         size={"md"}
         color={"rgb(248,120,57)"}
-        display={{ base: "hidden", md: "block" }}
+        display={{ base: "none", md: "block" }}
       >
         MűhelyJelentkezés™
       </Heading>
