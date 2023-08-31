@@ -18,7 +18,8 @@ export default function Navigation({ loginHidden }) {
             <Button
               colorScheme="orange"
               onClick={() => signOut()}
-              rounded={"xl"}
+              rounded={"full"}
+              px={6}
             >
               Kijelentkezés
             </Button>
@@ -26,7 +27,8 @@ export default function Navigation({ loginHidden }) {
             <Button
               colorScheme="orange"
               onClick={() => signIn()}
-              rounded={"xl"}
+              rounded={"full"}
+              px={6}
             >
               Bejelentkezés
             </Button>

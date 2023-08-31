@@ -32,7 +32,7 @@ export default function OpenedProgram({ program, joinProgram, closeProgram }) {
   return (
     <Modal isOpen={isOpen} size={"xl"} onClose={closeProgram}>
       <ModalOverlay />
-      <ModalContent rounded={"xl"}>
+      <ModalContent rounded={"2xl"}>
         <ModalHeader as={Flex} gap={3} alignItems={"center"}>
           <Avatar name={program?.title} src={program?.logoURL} size={"sm"} />
           {program?.title}
@@ -93,7 +93,7 @@ export default function OpenedProgram({ program, joinProgram, closeProgram }) {
             <Button
               colorScheme={"orange"}
               onClick={() => joinProgram(program?._id)}
-              rounded={"xl"}
+              rounded={"full"}
               px={12}
             >
               Jelentkezem a programra

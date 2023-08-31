@@ -42,7 +42,7 @@ export default function ProgramGrid({ programs, joinProgram, openProgram }) {
       {programs.length > 0 &&
         programs.map((program, index) => (
           <GridItem key={index}>
-            <Card rounded={"xl"}>
+            <Card rounded={"2xl"}>
               <CardHeader>
                 <Flex spacing="4">
                   <Flex flex="1" gap="4" alignItems="center" flexWrap="wrap">
@@ -107,9 +107,10 @@ export default function ProgramGrid({ programs, joinProgram, openProgram }) {
                 <ButtonGroup spacing="2" ml={"auto"}>
                   <Button
                     onClick={() => openProgram(program)}
-                    variant="ghost"
+                    variant="outline"
                     colorScheme="orange"
-                    rounded={"xl"}
+                    rounded={"full"}
+                    px="6"
                   >
                     Részletek
                   </Button>
@@ -118,7 +119,7 @@ export default function ProgramGrid({ programs, joinProgram, openProgram }) {
                       onClick={() => joinProgram(program._id)}
                       variant="solid"
                       colorScheme="orange"
-                      rounded={"xl"}
+                      rounded={"full"}
                       px="8"
                     >
                       Jelentkezés
